@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Simple JS Action
         id: greet
-        uses:  action/hello-world-javascript-action@v1
+        uses:  actions/hello-world-javascript-action@v1
         with:
           who-to-greet: Juan
       - name: Log greeting time
