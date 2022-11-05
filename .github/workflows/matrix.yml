@@ -9,7 +9,7 @@ jobs:
             node_version: [6,8,10]
             exclude:
               - os: ubuntu-latest
-              - node_version: 6
+                node_version: 6
           fail-fast: true
           max-parallel: 2
     runs-on: ${{  matrix.os  }}
