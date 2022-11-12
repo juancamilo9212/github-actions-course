@@ -16,6 +16,8 @@ jobs:
       container: 
         image: node:13.5.0-alpine3.10
       steps:
+        - name: Install curl
+          run: apt-get update; apt-get install curl
         - name: Print curl version
           run: curl --version
         - name: POST a user
