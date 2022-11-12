@@ -13,8 +13,6 @@ jobs:
           image: mongo
           ports:
             - "27017:27017"
-      container: 
-        image: node:13.5.0-alpine3.10
       steps:
         - name: Install curl
           run: sudo apt install -y curl
