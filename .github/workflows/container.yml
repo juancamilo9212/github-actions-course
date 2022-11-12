@@ -14,10 +14,6 @@ jobs:
           ports:
             - "27017:27017"
       steps:
-        - name: Install curl
-          run: sudo apt install -y curl
-        - name: Print curl version
-          run: curl --version
         - name: POST a user
           run: 'curl -X POST http://localhost:3001/api/user
             -H ''Content-Type: application/json'' 
