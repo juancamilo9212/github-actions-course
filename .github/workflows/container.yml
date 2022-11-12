@@ -16,9 +16,11 @@ jobs:
       container: 
         image: node:13.5.0-alpine3.10
       steps:
+        - name: Print curl version
+          run: curl --version
         - name: POST a user
           run: 'curl -X POST http://localhost:3001/api/user
-            -H ''Content-Type: application/json'' -d ''
-            {"username": "hello", "address": "Calle 11 sur"}'''
+            -H ''Content-Type: application/json'' 
+            -d ''{"username": "hello", "address": "Calle 11 sur"}'''
         - name: GET a user
           run: curl http://localhost:3001/api/users
