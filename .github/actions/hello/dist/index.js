@@ -1776,14 +1776,17 @@ exports.checkBypass = checkBypass;
 
 const core = __webpack_require__(873);
 const github = __webpack_require__(176);
-
-//throw(new Error("Some error"));
+try{
+throw(new Error("Some error"));
 const whoToGreet = core.getInput('who-to-greet');
 console.log(`Hello ${whoToGreet}`);
 
 const time = new Date();
 core.setOutput("time",time.toTimeString());
 console.log(JSON.stringify(github,null,'\t'));
+}catch(error){
+core.setFailed(error.message);
+}
 
 
 
