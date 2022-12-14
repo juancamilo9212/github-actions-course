@@ -1784,7 +1784,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_github__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_actions_github__WEBPACK_IMPORTED_MODULE_1__);
 
 
-try {
+
 //throw(new Error("Some error"));
 const whoToGreet = _actions_core__WEBPACK_IMPORTED_MODULE_0___default().getInput('who-to-greet');
 console.log(`Hello ${whoToGreet}`);
@@ -1792,9 +1792,7 @@ console.log(`Hello ${whoToGreet}`);
 const time = new Date();
 _actions_core__WEBPACK_IMPORTED_MODULE_0___default().setOutput("time",time.toTimeString());
 console.log(JSON.stringify(_actions_github__WEBPACK_IMPORTED_MODULE_1___default.a,null,'\t'));
-} catch (error) {
-_actions_core__WEBPACK_IMPORTED_MODULE_0___default().setFailed(error.messaage);
-}
+
 
 
 
